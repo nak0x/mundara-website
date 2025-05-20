@@ -1,8 +1,9 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">Hello Bulma</h1>
-      <p class="subtitle">This is styled using Bulma.</p>
-    </div>
-  </section>
+  <main class="home-container">
+    <HomeHero />
+    <hr />
+    <p>Section: Comment ca marche</p>
+    <hr />
+    <HomeCulturesSection />
+  </main>
 </template>

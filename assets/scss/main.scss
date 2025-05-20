@@ -1,17 +1,80 @@
 // assets/scss/main.scss
 
-@use './vars' as *;       // Must come before Bulma
-@use 'bulma/bulma';  // Loads Bulma after applying your overrides
+@use "@/assets/scss/_vars.scss" as *;  // bring in our theme variables
+@use "bulma/sass" with (
+  $primary: $primary,
+  $link: $link,
+  $info: $info,
+  $success: $success,
+  $warning: $warning,
+  $danger: $danger,
+  $light: $light,
+  $dark: $dark,
+  $family-primary: $family-primary,
+  $family-code: $family-code,
+  $radius: $radius,
+  $gap: $gap,
+  $body-background-color: $body-background-color
+);
+
+@use 'bulma_extensions';
 
 // Custom global styles
 
+// Components styles
 @use './components/index';
 
-@if($debug) {
-  .section {
-    border: 1px dashed red;
+// Hover effects
+
+:root {
+  --hover-background: #{$hover-bg-light};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-bg: hsl(#{$base-bg-h}, #{$base-bg-s}, #{$base-bg-dark-l});
+    --hover-background: #{$hover-bg-dark};
   }
-  .container {
-    border: 1px dashed blue;
+}
+
+[data-theme="light"] {
+  --hover-background: #{$hover-bg-light};
+}
+[data-theme="dark"] {
+  --hover-background: #{$hover-bg-dark};
+}
+
+
+// Background theming
+:root {
+  --app-background: #{$background-light}; // from SCSS variable
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-background: #{$background-dark};
+  }
+}
+
+[data-theme="light"] {
+  --app-background: #{$background-light};
+}
+
+[data-theme="dark"] {
+  --app-background: #{$background-dark};
+}
+
+body {
+  background-color: var(--app-background);
+  color: var(--bulma-text);
+}
+html {
+  background-color: var(--app-background);
+}
+
+
+@if($debug) {
+  *{
+    border: 1px dashed red;
   }
 }

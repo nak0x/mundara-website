@@ -37,6 +37,28 @@ export default defineNuxtConfig({
       }
     }
   },
+  modules: ['@nuxt/image'],
 
-  modules: ['@nuxt/image']
+  image: {
+    // Use the local provider (for /public assets)
+    providers: {
+      local: {
+        provider: 'ipx', // built-in transformer
+        options: {}
+      }
+    },
+    // Default options
+    img: {
+      loading: 'lazy'
+    },
+    formats: ['avif', 'webp'], // tries AVIF first, falls back to WebP/PNG
+    screens: {
+      sm: 320,
+      md: 640,
+      lg: 1024,
+      xl: 1280
+    },
+    // auto detects public/ path
+    dir: 'public'
+  }
 })
