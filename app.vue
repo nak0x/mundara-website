@@ -1,8 +1,8 @@
 <template>
   <Analytics />
   <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <Navbar />
+    <NuxtPage />
   </div>
 </template>
 

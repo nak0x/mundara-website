@@ -1,0 +1,17 @@
+// assets/scss/main.scss
+
+@use './vars' as *;       // Must come before Bulma
+@use 'bulma/bulma';  // Loads Bulma after applying your overrides
+
+// Custom global styles
+
+@use './components/index';
+
+@if($debug) {
+  .section {
+    border: 1px dashed red;
+  }
+  .container {
+    border: 1px dashed blue;
+  }
+}
