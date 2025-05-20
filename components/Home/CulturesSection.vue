@@ -34,13 +34,16 @@
   import { onMounted } from 'vue';
   import ScrollTrigger from 'gsap/ScrollTrigger';
 
-  gsap.registerPlugin(ScrollTrigger);
+  if (process.client) {
+    gsap.registerPlugin(ScrollTrigger);
+  }
 
   const layers = 5;
   const experiences = experiencesDatas.experiences;
 
   onMounted(() => {
     const door = document.querySelector('.clipping-door');
+    const title = document.querySelector('.section-title');
 
     gsap.timeline({
       scrollTrigger: {
@@ -55,10 +58,36 @@
       }
     })
     .to(door, {
-      scale: 10,
+      scale: 11.5,
       y: -250,
       ease: 'power2.inOut',
       transformOrigin: 'center center'
+    })
+    .to(title, {
+      opacity: 0,
+      ease: 'power2.inOut'
+    });
+    const container = document.querySelector('.cultures-container');
+    const layers = container?.querySelectorAll('.layer');
+
+    if (!layers) return;
+
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      const mouseX = (e.clientX - rect.left) / rect.width - 0.5;
+      const mouseY = (e.clientY - rect.top) / rect.height - 0.5;
+
+      layers.forEach((layer, i) => {
+        const depth = (i + 1) / layers.length;
+        const movement = depth * 30; // max offset in px
+
+        gsap.to(layer, {
+          x: mouseX * movement,
+          y: mouseY * movement,
+          duration: 0.4,
+          ease: 'power2.out'
+        });
+      });
     });
   });
 </script>
