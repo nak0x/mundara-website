@@ -42,6 +42,9 @@
         position: absolute;
         inset: 0;
         overflow: hidden;
+        scale: 0.34;
+        transform: translateY(35.5%);
+        transform-origin: center center;
 
         .layer {
           display: block;

@@ -7,7 +7,7 @@
       <section class="experience-section" v-for="exp in experiences" :key="exp.id">
         <div class="layers">
           <NuxtImg
-            v-for="i in layers"
+            v-for="i in exp.layers"
             :key="i"
             :src="`/images/experience/${exp.id}/layer_${i}.png`"
             format="avif"
@@ -38,12 +38,12 @@
     gsap.registerPlugin(ScrollTrigger);
   }
 
-  const layers = 5;
   const experiences = experiencesDatas.experiences;
 
   onMounted(() => {
     const door = document.querySelector('.clipping-door');
     const title = document.querySelector('.section-title');
+    const layersContainer = document.querySelector('.layers');
 
     gsap.timeline({
       scrollTrigger: {
@@ -54,7 +54,6 @@
         pin: true,
         anticipatePin: 1,
         invalidateOnRefresh: true,
-        markers: true
       }
     })
     .to(door, {
@@ -63,9 +62,19 @@
       ease: 'power2.inOut',
       transformOrigin: 'center center'
     })
+    .to(layersContainer, {
+      scale: 1.05,
+      ease: 'power2.inOut',
+      y: 0,
+      transformOrigin: 'center center'
+    })
     .to(title, {
       opacity: 0,
       ease: 'power2.inOut'
+    })
+    .to(door, {
+      opacity: 0,
+      ease: 'power2.inOut',
     });
     const container = document.querySelector('.cultures-container');
     const layers = container?.querySelectorAll('.layer');
