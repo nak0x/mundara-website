@@ -30,7 +30,35 @@
 
 <script setup>
   import experiencesDatas from '~/data/experiences.json';
+  import gsap from 'gsap';
+  import { onMounted } from 'vue';
+  import ScrollTrigger from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
 
   const layers = 5;
   const experiences = experiencesDatas.experiences;
+
+  onMounted(() => {
+    const door = document.querySelector('.clipping-door');
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: '.cultures-container',
+        start: 'top top',
+        end: 'bottom top', // ends when bottom of container hits top of viewport
+        scrub: 0.1,
+        pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        markers: true
+      }
+    })
+    .to(door, {
+      scale: 10,
+      y: -250,
+      ease: 'power2.inOut',
+      transformOrigin: 'center center'
+    });
+  });
 </script>

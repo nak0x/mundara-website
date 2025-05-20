@@ -37,7 +37,7 @@ export default defineNuxtConfig({
       }
     }
   },
-  modules: ['@nuxt/image'],
+  modules: ['@nuxt/image-edge'],
 
   image: {
     // Use the local provider (for /public assets)
