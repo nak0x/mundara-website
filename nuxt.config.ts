@@ -46,9 +46,6 @@ export default defineNuxtConfig({
       }
     },
     // Default options
-    img: {
-      loading: 'lazy'
-    },
     formats: ['avif', 'webp'], // tries AVIF first, falls back to WebP/PNG
     screens: {
       sm: 320,
@@ -59,11 +56,5 @@ export default defineNuxtConfig({
     // auto detects public/ path
     dir: 'public'
   },
-  components: [
-    {
-      path: '~/components',
-      pathPrefix: false,
-    },
-  ],
   imports: { autoImport: true },
 })
