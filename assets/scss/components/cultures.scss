@@ -1,0 +1,61 @@
+.cultures-container {
+  height: 100dvh;
+  position: relative;
+  z-index: 1;
+
+  .section-title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  .experiences-container {
+    z-index: -1;
+    position:absolute;
+    inset: 0;
+    overflow: hidden;
+
+    .clipping-door {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      height: 100dvh;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      transform-origin: center center;
+      will-change: transform;
+    }
+
+    .experience-section {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #efefef;
+
+      .layers {
+        display: block;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        scale: 0.34;
+        transform: translateY(35.5%);
+        transform-origin: center center;
+
+        .layer {
+          display: block;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          bottom: 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

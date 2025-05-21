@@ -1,3 +1,65 @@
 // assets/scss/_vars.scss
 
-$debug: true;
+$debug: false;
+
+// === Color Theme ===
+
+// Primary brand color (dark chocolate brown)
+$primary: hsl(16, 74%, 16%); // approx. #471c08
+$primary-invert: #f4dcc7;    // light beige for contrast text
+
+// Optional palette extensions
+$link: $primary;
+$info: hsl(204, 86%, 53%);         // keep blue info
+$success: hsl(141, 53%, 53%);      // soft green
+$warning: hsl(48, 100%, 67%);      // warm yellow
+$danger: hsl(348, 86%, 61%);       // red alert
+
+// Background and text
+$light: #f4dcc7;   // beige background
+$dark: #471c08;    // dark brown text
+
+// === Background ===
+$base-bg-h: 30;
+$base-bg-s: 20%;
+$base-bg-l: 97%;
+$base-bg-dark-l: calc(100% - $base-bg-l);
+$hover-delta: 5%;
+
+$background-light: hsl($base-bg-h, $base-bg-s, $base-bg-l);
+$background-dark: hsl($base-bg-h, $base-bg-s, $base-bg-dark-l);
+
+$body-background-color: $background-light;
+$light: $background-light;
+$light-invert: $dark;
+
+
+// Derived contrast values (optional, used in buttons, tags)
+$light-invert: $dark;
+$dark-invert: $light;
+
+// === Hover ===
+$hover-bg-light: hsl($base-bg-h, $base-bg-s, $base-bg-l - $hover-delta); // slightly darker
+$hover-bg-dark: hsl($base-bg-h, $base-bg-s, $base-bg-dark-l + $hover-delta); // slightly lighter
+
+
+// === Typography ===
+
+$family-primary: 'Inter', 'Open Sans', sans-serif;
+$family-code: 'Fira Code', monospace;
+
+// Custom weight and sizes
+$weight-normal: 400;
+$weight-bold: 700;
+$size-1: 3rem;
+
+
+// === Spacing & Layout ===
+
+$gap: 48px;             // consistent with fixed pixel layout
+$radius: 8px;           // more rounded, modern
+$radius-small: 4px;
+$radius-large: 12px;
+
+$navbar-padding-vertical: 1rem;
+
