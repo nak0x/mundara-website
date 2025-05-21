@@ -5,8 +5,8 @@
         src="/images/logo.png"
         alt="Mundara"
         height="64"
+        width="110"
         format="avif"
-        placeholder
       />
     </div>
     <div class="navitems-container column is-flex-center">

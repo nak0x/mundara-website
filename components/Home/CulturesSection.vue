@@ -1,29 +1,30 @@
 <template>
-  <div class="cultures-container">
-    <h2 class="title is-1 section-title">
-      Discover the cultures
-    </h2>
-    <div class="experiences-container">
-      <section class="experience-section" v-for="exp in experiences" :key="exp.id">
-        <div class="layers">
-          <NuxtImg
-            v-for="i in exp.layers"
-            :key="i"
-            :src="`/images/experience/${exp.id}/layer_${i}.png`"
-            format="avif"
-            placeholder
-            class="layer"
-            aria-hidden
-          />
-        </div>
-      </section>
-      <NuxtImg
-        src="/images/door.png"
-        format="avif"
-        placeholder
-        class="clipping-door"
-        aria-hidden
-      />
+  <div class="experience-wrapper">
+    <div class="cultures-container">
+      <h2 class="title is-1 section-title">
+        Discover the cultures
+      </h2>
+      <div class="experiences-container">
+        <section class="experience-section" v-for="exp in experiences" :key="exp.id">
+          <div class="layers">
+            <NuxtImg
+              v-for="i in exp.layers"
+              :key="i"
+              :src="`/images/experience/${exp.id}/layer_${i}.png`"
+              format="avif"
+              class="layer"
+              aria-hidden
+            />
+          </div>
+        </section>
+        <NuxtImg
+          src="/images/door.png"
+          format="avif"
+          placeholder
+          class="clipping-door"
+          aria-hidden
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -50,32 +51,28 @@
         trigger: '.cultures-container',
         start: 'top top',
         end: 'bottom top', // ends when bottom of container hits top of viewport
-        scrub: 0.1,
-        pin: true,
+        scrub: true,
         anticipatePin: 1,
         invalidateOnRefresh: true,
+        id: "experiences"
       }
     })
     .to(door, {
-      scale: 11.5,
-      y: -250,
-      ease: 'power2.inOut',
+      scale: 11.56,
+      y: -1000,
+      ease: 'none',
       transformOrigin: 'center center'
-    })
+    }, 0)
     .to(layersContainer, {
       scale: 1.05,
-      ease: 'power2.inOut',
       y: 0,
+      ease: 'power2.out',
       transformOrigin: 'center center'
-    })
+    }, "-=0.6")
     .to(title, {
       opacity: 0,
-      ease: 'power2.inOut'
-    })
-    .to(door, {
-      opacity: 0,
-      ease: 'power2.inOut',
-    });
+      ease: 'none'
+    }, "-=1")
     const container = document.querySelector('.cultures-container');
     const layers = container?.querySelectorAll('.layer');
 

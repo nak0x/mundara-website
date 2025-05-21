@@ -1,59 +1,66 @@
-.cultures-container {
-  height: 100dvh;
-  position: relative;
-  z-index: 1;
+.experience-wrapper {
+  height: 500dvh;
 
-  .section-title {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-  }
+  .cultures-container {
+    height: 100dvh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
 
-  .experiences-container {
-    z-index: -1;
-    position:absolute;
-    inset: 0;
-    overflow: hidden;
-
-    .clipping-door {
+    .section-title {
       position: absolute;
-      top: 0;
+      top: 30%;
       left: 50%;
-      transform: translateX(-50%);
-      display: block;
-      height: 100dvh;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      transform-origin: center center;
-      will-change: transform;
+      transform: translateY(-50%) translateX(-50%);
     }
 
-    .experience-section {
-      position: absolute;
+    .experiences-container {
+      z-index: -1;
+      position:absolute;
       inset: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #efefef;
+      overflow: hidden;
 
-      .layers {
+      .clipping-door {
+        position: absolute;
+        top: 0;
+        left: 50%;
         display: block;
+        height: 100dvh;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        transform: translateX(-50%);
+        transform-origin: center center;
+        will-change: transform;
+      }
+
+      .experience-section {
         position: absolute;
         inset: 0;
-        overflow: hidden;
-        scale: 0.34;
-        transform: translateY(35.5%);
-        transform-origin: center center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #efefef;
 
-        .layer {
+        .layers {
           display: block;
           position: absolute;
-          height: 100%;
-          width: 100%;
-          top: 0;
-          bottom: 0;
-          object-fit: cover;
+          inset: 0;
+          overflow: hidden;
+          scale: 0.34;
+          transform: translateY(35.5%);
+          transform-origin: center center;
+
+          .layer {
+            backface-visibility: hidden;
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            object-fit: cover;
+          }
         }
       }
     }
