@@ -1,5 +1,5 @@
 <template>
-  <div class="experience-wrapper">
+  <div class="experience-wrapper" id="#experiences">
     <div class="cultures-container">
       <h2 class="title is-1 section-title">
         Discover the cultures
@@ -54,13 +54,13 @@
         scrub: true,
         anticipatePin: 1,
         invalidateOnRefresh: true,
-        id: "experiences"
+        id: "experiences",
       }
     })
     .to(door, {
       scale: 11.56,
       y: -1000,
-      ease: 'none',
+      ease: 'power2.in',
       transformOrigin: 'center center'
     }, 0)
     .to(layersContainer, {
@@ -68,24 +68,29 @@
       y: 0,
       ease: 'power2.out',
       transformOrigin: 'center center'
-    }, "-=0.6")
+    }, "-=0.67")
     .to(title, {
       opacity: 0,
       ease: 'none'
     }, "-=1")
+
+    // Parlax
     const container = document.querySelector('.cultures-container');
     const layers = container?.querySelectorAll('.layer');
+
+    const paralaxStrength = 1.2;
+    const paralaxLayerZOffset = 60;
 
     if (!layers) return;
 
     container.addEventListener('mousemove', (e) => {
       const rect = container.getBoundingClientRect();
-      const mouseX = (e.clientX - rect.left) / rect.width - 0.5;
-      const mouseY = (e.clientY - rect.top) / rect.height - 0.5;
+      const mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * paralaxStrength;
+      const mouseY = ((e.clientY - rect.top) / rect.height - 0.5) * paralaxStrength;
 
       layers.forEach((layer, i) => {
         const depth = (i + 1) / layers.length;
-        const movement = depth * 30; // max offset in px
+        const movement = depth * paralaxLayerZOffset; // max offset in px
 
         gsap.to(layer, {
           x: mouseX * movement,

@@ -56,11 +56,5 @@ export default defineNuxtConfig({
     // auto detects public/ path
     dir: 'public'
   },
-  components: [
-    {
-      path: '~/components',
-      pathPrefix: false,
-    },
-  ],
   imports: { autoImport: true },
 })
