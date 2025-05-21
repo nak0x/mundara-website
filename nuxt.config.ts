@@ -1,7 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
-
+  app: {
+    head: {
+      title: 'Mundara', // default fallback title
+      htmlAttrs: {
+        lang: 'en',
+      },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css' },
+        { rel: 'stylesheet', href: '/style/main.css' }
+      ]
+    }
+  },
   devtools: {
     enabled: true,
 
@@ -9,25 +21,12 @@ export default defineNuxtConfig({
       enabled: true
     }
   },
-
   ssr: true,
-
-  // SSG target
   target: 'static',
-
   nitro: {
     preset: 'vercel-static'
   },
-
-  app: {
-    head: {
-      link: [
-      ]
-    }
-  },
-
   css:['@/assets/scss/main.scss'],
-
   vite: {
     css: {
       preprocessorOptions: {
@@ -38,7 +37,6 @@ export default defineNuxtConfig({
     }
   },
   modules: ['@nuxt/image-edge'],
-
   image: {
     // Use the local provider (for /public assets)
     providers: {
@@ -60,5 +58,12 @@ export default defineNuxtConfig({
     },
     // auto detects public/ path
     dir: 'public'
-  }
+  },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
+  imports: { autoImport: true },
 })
