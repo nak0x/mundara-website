@@ -1,0 +1,16 @@
+:root {
+  --bulma-primary-h: 35deg;
+  --bulma-primary-s: 84%;
+  --bulma-primary-l: 51%;
+  --bulma-scheme-s: 0%;
+  --bulma-body-background-color: #000000;
+  --bulma-skeleton-background: #000000;
+}
+
+.navbar {
+  --bulma-navbar-background-color: transparent;
+}
+
+.footer {
+  --bulma-footer-background-color: transparent;
+}
