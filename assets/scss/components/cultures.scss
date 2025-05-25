@@ -32,6 +32,8 @@
         transform: translateX(-50%);
         transform-origin: center center;
         will-change: transform;
+        user-select: none;
+        pointer-events: none;
       }
 
       .experience-section {
@@ -41,6 +43,17 @@
         justify-content: center;
         align-items: center;
         background-color: #efefef;
+        will-change: transform;
+
+        .content-container {
+          position: absolute;
+          $top: 50%;
+          $left: 25%;
+          top: $top;
+          left: $left;
+          transform: translateX(-$left) translateY(-$top);
+          will-change: transform;
+        }
 
         .layers {
           display: block;

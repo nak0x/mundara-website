@@ -5,7 +5,7 @@
         Discover the cultures
       </h2>
       <div class="experiences-container">
-        <section class="experience-section" v-for="exp in experiences" :key="exp.id">
+        <section class="experience-section" v-for="exp in experiences" :key="exp.id" :data-id="exp.id">
           <div class="layers">
             <NuxtImg
               v-for="i in exp.layers"
@@ -14,7 +14,14 @@
               format="avif"
               class="layer"
               aria-hidden
+              height="100dvh"
+              width="100vw"
             />
+            <div class="content-container">
+              <h3 class="title is-1 mb-3">{{ exp.name }}</h3>
+              <p class="subtitle has-text-white">{{ exp.description }}</p>
+              <NuxtLink to="/reservation/?id={{exp.id}}" class="button is-primary mt-3">Reserver cette culture</NuxtLink>
+            </div>
           </div>
         </section>
         <NuxtImg
@@ -23,6 +30,8 @@
           placeholder
           class="clipping-door"
           aria-hidden
+          height="100dvh"
+          width="100vw"
         />
       </div>
     </div>
@@ -64,7 +73,7 @@
       transformOrigin: 'center center'
     }, 0)
     .to(layersContainer, {
-      scale: 1.05,
+      scale: 1.1,
       y: 0,
       ease: 'power2.out',
       transformOrigin: 'center center'
@@ -100,5 +109,11 @@
         });
       });
     });
+
+    // Sections scrolling
+    const sections = gsap.utils.toArray('.experience-section');
+
+    console.log(sections)
+
   });
 </script>
