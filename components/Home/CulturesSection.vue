@@ -1,29 +1,39 @@
 <template>
-  <div class="cultures-container">
-    <h2 class="title is-1 section-title">
-      Discover the cultures
-    </h2>
-    <div class="experiences-container">
-      <section class="experience-section" v-for="exp in experiences" :key="exp.id">
-        <div class="layers">
-          <NuxtImg
-            v-for="i in exp.layers"
-            :key="i"
-            :src="`/images/experience/${exp.id}/layer_${i}.png`"
-            format="avif"
-            placeholder
-            class="layer"
-            aria-hidden
-          />
-        </div>
-      </section>
-      <NuxtImg
-        src="/images/door.png"
-        format="avif"
-        placeholder
-        class="clipping-door"
-        aria-hidden
-      />
+  <div class="experience-wrapper" id="#experiences">
+    <div class="cultures-container">
+      <h2 class="title is-1 section-title">
+        Discover the cultures
+      </h2>
+      <div class="experiences-container">
+        <section class="experience-section" v-for="exp in experiences" :key="exp.id" :data-id="exp.id">
+          <div class="layers">
+            <NuxtImg
+              v-for="i in exp.layers"
+              :key="i"
+              :src="`/images/experience/${exp.id}/layer_${i}.png`"
+              format="avif"
+              class="layer"
+              aria-hidden
+              height="100dvh"
+              width="100vw"
+            />
+            <div class="content-container">
+              <h3 class="title is-1 mb-3">{{ exp.name }}</h3>
+              <p class="subtitle has-text-white">{{ exp.description }}</p>
+              <NuxtLink to="/reservation/?id={{exp.id}}" class="button is-primary mt-3">Reserver cette culture</NuxtLink>
+            </div>
+          </div>
+        </section>
+        <NuxtImg
+          src="/images/door.png"
+          format="avif"
+          placeholder
+          class="clipping-door"
+          aria-hidden
+          height="100dvh"
+          width="100vw"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -50,45 +60,46 @@
         trigger: '.cultures-container',
         start: 'top top',
         end: 'bottom top', // ends when bottom of container hits top of viewport
-        scrub: 0.1,
-        pin: true,
+        scrub: true,
         anticipatePin: 1,
         invalidateOnRefresh: true,
+        id: "experiences",
       }
     })
     .to(door, {
-      scale: 11.5,
-      y: -250,
-      ease: 'power2.inOut',
+      scale: 11.56,
+      y: -1000,
+      ease: 'power2.in',
       transformOrigin: 'center center'
-    })
+    }, 0)
     .to(layersContainer, {
-      scale: 1.05,
-      ease: 'power2.inOut',
+      scale: 1.1,
       y: 0,
+      ease: 'power2.out',
       transformOrigin: 'center center'
-    })
+    }, "-=0.67")
     .to(title, {
       opacity: 0,
-      ease: 'power2.inOut'
-    })
-    .to(door, {
-      opacity: 0,
-      ease: 'power2.inOut',
-    });
+      ease: 'none'
+    }, "-=1")
+
+    // Parlax
     const container = document.querySelector('.cultures-container');
     const layers = container?.querySelectorAll('.layer');
+
+    const paralaxStrength = 1.2;
+    const paralaxLayerZOffset = 60;
 
     if (!layers) return;
 
     container.addEventListener('mousemove', (e) => {
       const rect = container.getBoundingClientRect();
-      const mouseX = (e.clientX - rect.left) / rect.width - 0.5;
-      const mouseY = (e.clientY - rect.top) / rect.height - 0.5;
+      const mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * paralaxStrength;
+      const mouseY = ((e.clientY - rect.top) / rect.height - 0.5) * paralaxStrength;
 
       layers.forEach((layer, i) => {
         const depth = (i + 1) / layers.length;
-        const movement = depth * 30; // max offset in px
+        const movement = depth * paralaxLayerZOffset; // max offset in px
 
         gsap.to(layer, {
           x: mouseX * movement,
@@ -98,5 +109,11 @@
         });
       });
     });
+
+    // Sections scrolling
+    const sections = gsap.utils.toArray('.experience-section');
+
+    console.log(sections)
+
   });
 </script>

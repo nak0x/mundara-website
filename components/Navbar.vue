@@ -5,13 +5,13 @@
         src="/images/logo.png"
         alt="Mundara"
         height="64"
+        width="110"
         format="avif"
-        placeholder
       />
     </div>
     <div class="navitems-container column is-flex-center">
       <NuxtLink to="/" class="custom-navitem">Home</NuxtLink>
-      <NuxtLink to="/#experiences" class="custom-navitem">Experiences</NuxtLink>
+      <a href="#experiences" class="custom-navitem">Experiences</a>
       <NuxtLink to="/contact" class="custom-navitem">Contact</NuxtLink>
     </div>
     <div class="nav-cta column p-3 is-2 is-flex is-justify-content-end is-align-items-center">
