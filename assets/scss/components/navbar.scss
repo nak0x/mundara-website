@@ -1,6 +1,4 @@
 /* Navbar */
-
-
 .custom-navbar {
   .column {
     padding: 0;
@@ -9,7 +7,7 @@
   .navitems-container {
 
     .custom-navitem {
-      background-color: var(--app-background);
+      background-color: transparent;
       height: 100%;
       display: flex;
       align-items: center;
@@ -23,8 +21,6 @@
         background-color: var(--hover-background);
         border-bottom: 3px solid var(--bulma-link-text);
       }
-
-
     }
   }
 }

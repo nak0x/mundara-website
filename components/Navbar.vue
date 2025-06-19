@@ -1,11 +1,11 @@
 <template>
-  <nav class="custom-navbar columns p-0 m-0">
+  <nav class="custom-navbar columns px-6 py-0 m-0">
     <div class="logo-container column is-2 p-3">
       <NuxtImg
         src="/images/logo.png"
         alt="Mundara"
         height="64"
-        width="110"
+        width="130"
         format="avif"
       />
     </div>
