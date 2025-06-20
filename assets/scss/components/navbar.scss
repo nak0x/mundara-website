@@ -4,6 +4,8 @@
   top: 0;
   z-index: 100;
   width: 100vw;
+  background-color: #F9F7F577;
+  backdrop-filter: blur(15px);
 
   .column {
     padding: 0;
