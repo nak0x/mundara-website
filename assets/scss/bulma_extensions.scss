@@ -34,8 +34,13 @@
   }
 }
 
-.w-100 {
-  width: 100% !important;
+@for $percent from 0 through 100 {
+  .w-#{$percent} {
+    width: #{$percent + '%'} !important;
+  }
+  .h-#{$percent} {
+    height: #{$percent + '%'} !important;
+  }
 }
 
 .title {
