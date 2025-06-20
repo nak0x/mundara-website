@@ -4,6 +4,31 @@
   align-items: center;
 }
 
-.button {
-  border-radius: 2px !important;
+.flex-col {
+  flex-direction: column;
 }
+
+.button.is-primary {
+  border-radius: 2px !important;
+  border-image-source: url("/images/button-border-primary.png");
+  border-image-slice: 42; /* adjust if needed */
+  border-image-width: 20px;
+  border-image-repeat: stretch;
+  border-image-outset: 5px;
+  color: #F6E8D8;
+}
+.button.is-primary:hover {
+  border-image-source: url("/images/button-border-primary-h.png");
+}
+.button.is-primary:focus {
+  border-image-source: url("/images/button-border-primary-f.png");
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.title {
+  font-family: 'Nersans-Three';
+}
+

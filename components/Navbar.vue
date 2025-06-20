@@ -10,12 +10,14 @@
       />
     </div>
     <div class="navitems-container column is-flex-center">
-      <NuxtLink to="/" class="custom-navitem">Home</NuxtLink>
-      <a href="#experiences" class="custom-navitem">Experiences</a>
+      <NuxtLink to="/" class="custom-navitem">Accueil</NuxtLink>
+      <a href="/#presentation" class="custom-navitem">Présentation</a>
+      <a href="/#ateliers" class="custom-navitem">Ateliers</a>
+      <a href="/#infos" class="custom-navitem">Infos pratiques</a>
       <NuxtLink to="/contact" class="custom-navitem">Contact</NuxtLink>
     </div>
     <div class="nav-cta column p-3 is-2 is-flex is-justify-content-end is-align-items-center">
-      <NuxtLink to="/reservation" class="button">Reserver</NuxtLink>
+      <NuxtLink to="/reservation" class="button is-primary">Reserver</NuxtLink>
     </div>
   </nav>
 </template>
