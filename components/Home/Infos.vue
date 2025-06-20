@@ -1,5 +1,5 @@
 <template>
-  <section class="section b-bleu is-flex-center">
+  <section class="section b-bleu is-flex-center" id="infos">
     <div class="is-flex-center flex-col">
       <p class="title is-3 is-flex-center g-1" v-for="(info, idx) in infos" :key="idx">
         <NuxtImg
