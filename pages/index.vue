@@ -4,5 +4,6 @@
     <HomeConcept />
     <!-- <HomeCommentCaMarche /> -->
     <HomeAtelier />
+    <HomeCultureSectionSimple />
   </main>
 </template>
