@@ -4,20 +4,95 @@ $debug: false;
 
 // === Color Theme ===
 
+// Color palette:
+
+$beige: #F6E8D8;
+$blanc: #F9F4EF;
+$orange: #E56B46;
+$bleu: #203348;
+$marron: #563018;
+$vert: #7D7932;
+$jaune: #FBB053;
+$noir: #222021;
+
+.c-beige {
+  color: $beige !important;
+}
+
+.b-beige {
+  background-color: $beige !important;
+}
+
+.c-blanc {
+  color: $blanc !important;
+}
+
+.b-blanc {
+  background-color: $blanc !important;
+}
+
+.c-orange {
+  color: $orange !important;
+}
+
+.b-orange {
+  background-color: $orange !important;
+}
+
+.c-bleu {
+  color: $bleu !important;
+}
+
+.b-bleu {
+  background-color: $bleu !important;
+}
+
+.c-marron {
+  color: $marron !important;
+}
+
+.b-marron {
+  background-color: $marron !important;
+}
+
+.c-vert {
+  color: $vert !important;
+}
+
+.b-vert {
+  background-color: $vert !important;
+}
+
+.c-jaune {
+  color: $jaune !important;
+}
+
+.b-jaune {
+  background-color: $jaune !important;
+}
+
+.c-noir {
+  color: $noir !important;
+}
+
+.b-noir {
+  background-color: $noir !important;
+}
+
 // Primary brand color (dark chocolate brown)
-$primary: hsl(16, 74%, 16%); // approx. #471c08
-$primary-invert: #f4dcc7;    // light beige for contrast text
+$primary: $orange; // approx. #471c08
+$primary-invert: $beige;    // light beige for contrast text
 
 // Optional palette extensions
 $link: $primary;
-$info: hsl(204, 86%, 53%);         // keep blue info
-$success: hsl(141, 53%, 53%);      // soft green
-$warning: hsl(48, 100%, 67%);      // warm yellow
+$info: $marron;         // keep blue info
+$success: $vert;      // soft green
+$warning: $jaune;      // warm yellow
 $danger: hsl(348, 86%, 61%);       // red alert
 
 // Background and text
-$light: #f4dcc7;   // beige background
-$dark: #471c08;    // dark brown text
+$light: $beige;   // beige background
+$dark: $beige;    // dark brown text
 
 // === Background ===
 $base-bg-h: 30;
@@ -45,7 +120,7 @@ $hover-bg-dark: hsl($base-bg-h, $base-bg-s, $base-bg-dark-l + $hover-delta); // 
 
 // === Typography ===
 
-$family-primary: 'Inter', 'Open Sans', sans-serif;
+$family-primary: 'GeneralSans-Variable', 'Inter', 'Open Sans', sans-serif;
 $family-code: 'Fira Code', monospace;
 
 // Custom weight and sizes

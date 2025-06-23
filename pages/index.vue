@@ -1,6 +1,10 @@
 <template>
-  <main class="home-container">
+  <main class="page-container">
     <HomeHero />
-    <HomeCulturesSection />
+    <HomeConcept />
+    <HomeAtelier />
+    <HomeCulture />
+    <HomeInfos />
+    <HomeFaq />
   </main>
 </template>

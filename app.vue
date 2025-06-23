@@ -3,6 +3,7 @@
     <Navbar />
     <NuxtPage />
     <Analytics />
+    <AppFooter />
   </div>
 </template>
 

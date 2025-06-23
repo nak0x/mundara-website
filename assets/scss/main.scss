@@ -1,5 +1,6 @@
 // assets/scss/main.scss
 
+@use "@/assets/scss/_fonts.scss" as *;
 @use "@/assets/scss/_vars.scss" as *;  // bring in our theme variables
 @use "bulma/sass" with (
   $primary: $primary,
@@ -18,7 +19,6 @@
 );
 
 @use 'bulma_extensions';
-
 // Custom global styles
 
 // Components styles
@@ -32,8 +32,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --app-bg: hsl(#{$base-bg-h}, #{$base-bg-s}, #{$base-bg-dark-l});
-    --hover-background: #{$hover-bg-dark};
+    --app-bg: hsl(#{$base-bg-h}, #{$base-bg-s}, #{$base-bg-l});
   }
 }
 
@@ -41,7 +40,7 @@
   --hover-background: #{$hover-bg-light};
 }
 [data-theme="dark"] {
-  --hover-background: #{$hover-bg-dark};
+  --hover-background: #{$hover-bg-light};
 }
 
 
@@ -52,7 +51,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --app-background: #{$background-dark};
+    --app-background: #{$background-light}; // from SCSS variable
   }
 }
 
@@ -61,7 +60,7 @@
 }
 
 [data-theme="dark"] {
-  --app-background: #{$background-dark};
+  --app-background: #{$background-light};
 }
 
 body {
