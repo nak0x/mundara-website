@@ -50,7 +50,7 @@
 
           <div class="field is-grouped">
             <div class="control">
-              <button type="button" class="button is-secondary">Cancel</button>
+              <button type="button" @click="resetForm" class="button is-secondary">Cancel</button>
             </div>
             <div class="control">
               <button type="submit" class="button is-primary">Submit</button>
@@ -79,6 +79,14 @@ const message = ref('')
 const agree = ref(false)
 
 const isSubmitted = ref(false)
+
+function resetForm() {
+  nom.value = '';
+  objet.value = '';
+  email.value = '';
+  message.value = '';
+  agree.value = false;
+}
 
 function handleSubmit() {
   console.log('Form submitted:', {
