@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .is-flex-center {
   display: flex;
   justify-content: center;
@@ -49,7 +51,7 @@
   }
 
   .g-#{$percent} {
-    gap: #{$percent/2 + 'rem'};
+    gap: #{math.div($percent, 2) + 'rem'};
   }
 }
 

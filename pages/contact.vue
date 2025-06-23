@@ -43,7 +43,7 @@
             <div class="control">
               <label class="checkbox">
                 <input type="checkbox" v-model="agree" />
-                I agree to the <a href="/cgv">terms and conditions</a>
+                I agree to the <a href="/">terms and conditions</a>
               </label>
             </div>
           </div>
