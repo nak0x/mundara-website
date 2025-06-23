@@ -42,7 +42,7 @@
                 
                 <!-- Text Content -->
                 <div class="card-title">
-                  <h3 class="title is-4 has-text-dark has-text-weight-bold">
+                  <h3 class="title is-4 c-noir has-text-weight-bold">
                     {{ slide.title }}
                   </h3>
                 </div>
@@ -70,23 +70,23 @@ const currentIndex = ref(0)
 const slides = [
   {
     title: 'MAROC',
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/maroco.jpg',
   },
   {
     title: 'MEXIQUE ANCIEN',
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/hands-clayering.png',
   },
   {
     title: 'ÉGYPTE ANCIENNE',
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/egypte.jpg',
   },
   {
     title: 'GRÈCE ANTIQUE',
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/grece.jpg',
   },
   {
     title: 'CHINE ANCIENNE',
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/china.jpg',
   }
 ]
 

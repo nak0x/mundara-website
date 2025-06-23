@@ -11,6 +11,9 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css' },
         { rel: 'stylesheet', href: '/style/main.css' }
+      ],
+      script: [
+        { src: 'https://kit.fontawesome.com/dce9068a82.js' }
       ]
     }
   },

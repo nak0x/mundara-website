@@ -1,8 +1,7 @@
 <template>
-  <main class="home-container">
+  <main class="page-container">
     <HomeHero />
     <HomeConcept />
-    <!-- <HomeCommentCaMarche /> -->
     <HomeAtelier />
     <HomeCulture />
     <HomeInfos />
