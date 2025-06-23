@@ -8,6 +8,12 @@
   flex-direction: column;
 }
 
+.glass {
+  background-color: #fff1;
+  backdrop-filter: blur(8px);
+  border-radius: var(--bulma-radius);
+}
+
 .button{
 
   &.is-primary, &.is-secondary {
@@ -41,6 +47,10 @@
   .h-#{$percent} {
     height: #{$percent + '%'} !important;
   }
+
+  .g-#{$percent} {
+    gap: #{$percent/2 + 'rem'};
+  }
 }
 
 .title {
@@ -62,6 +72,8 @@
     border-image-repeat: stretch;
     border-image-outset: 8px;
     z-index: 2;
+    user-select: none;
+    pointer-events: none;
   }
 
   img {
@@ -76,6 +88,6 @@
   color: inherit !important;
 }
 
-.g-1 {
-  gap: 1rem;
+.block-pointer {
+  cursor: not-allowed;
 }
