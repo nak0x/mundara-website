@@ -1,9 +1,8 @@
 <template>
   <div class="hero is-fullheight pt-0 is-flex is-align-items-center">
     <div class="step-content w-100 is-flex-center flex-col g-2">
-      <h1 class="title is-2 c-noir w-100 has-text-centered">Choice</h1>
+      <h1 class="title is-2 c-noir w-100 has-text-centered">Choix</h1>
       <div class="columns is-multiline">
-
         <div class="column is-one-third" v-for="(choice, key) in choices" :key="key">
           <div class="choice-container">
             <NuxtImg
@@ -23,7 +22,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -87,7 +85,7 @@
 .choice-container {
   position: relative;
   min-height: 400px;
-  aspect-ratio: 9/13;
+  aspect-ratio: 9/11;
   padding: 0 !important;
 }
 
