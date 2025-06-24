@@ -3,7 +3,7 @@
     <HomeHero />
     <HomeConcept />
     <HomeAtelier />
-    <HomeCulture />
+    <HomeCultures />
     <HomeInfos />
     <HomeFaq />
   </main>
