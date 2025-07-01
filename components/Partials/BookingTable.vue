@@ -1,6 +1,6 @@
 <template>
   <div class="bookingTable b-orange p-4">
-    <div class="is-flex is-justify-content-space-between g-4 mb-5">
+    <div class="overflow-x-scroll is-flex is-justify-content-space-between g-4 mb-5">
       <button
         class="title is-size-5 p-3 day m-0"
         v-for="(day, key) in days"
@@ -9,7 +9,7 @@
         @click="useDay(key)"
       >{{ day }}</button>
     </div>
-    <div class="columns is-multiline">
+    <div class="sessions-container columns is-multiline">
       <div
         class="column is-4 c-noir session" 
         v-for="(session, key) in filteredSessions"
@@ -26,10 +26,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="c-noir has-text-centered my-4">
-    <p>Informations : Session solo = Inscription seul, expérience en groupe avec des inconnus. Session groupe = Inscription en groupe, ami.e.s, famille etc...
-    </p>
   </div>
 </template>
 
@@ -113,16 +109,22 @@
 </script>
 
 
-<style>
+<style lang="scss">
 .bookingTable {
   border-radius: var(--bulma-radius);
 }
 
 .day {
   border-radius: var(--bulma-radius);
+  min-width: fit-content;
 }
 
-.session {
-  cursor: pointer;
+.sessions-container {
+  overflow-y: auto;
+  max-height: 60dvh;
+
+  .session {
+    cursor: pointer;
+  }
 }
 </style>

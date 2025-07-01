@@ -1,5 +1,5 @@
 <template>
-  <div class="columns w-100 c-noir">
+  <div class="columns is-mobile is-align-items-center w-100 c-noir">
     <div class="column is-3">
       <div v-if="currentStep > 1" >
         <button @click="previews"><i class="c-orange is-size-4 fa-solid fa-arrow-left"></i></button>
