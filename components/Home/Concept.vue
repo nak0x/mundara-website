@@ -2,7 +2,7 @@
   <section class="section b-orange" id="presentation">
     <div class="columns">
       <div class="column is-6">
-        <h1 class="title is-1 c-noir">Le concept<br />de l’expérience</h1>
+        <h1 class="title is-1 is-size-2-mobile c-noir">Le concept<br />de l’expérience</h1>
         <div class="rugged-border" style="height: auto; width: 70%;">
           <NuxtImg
             src="/images/hands-clayering.png"

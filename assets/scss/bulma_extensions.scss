@@ -55,6 +55,17 @@
   }
 }
 
+@media screen and (min-width: 992px) {
+  @for $percent from 0 through 100 {
+    .w-#{$percent}-desktop {
+      width: #{$percent + '%'} !important;
+    }
+    .h-#{$percent}-desktop {
+      height: #{$percent + '%'} !important;
+    }
+  }
+}
+
 .title {
   font-family: 'Nersans-Three';
 }

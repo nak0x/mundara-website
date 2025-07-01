@@ -24,14 +24,14 @@
 <style lang="scss">
 .row {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
 
   .col {
     display: block;
-    width: 50vw;
-    height: 50vh;
+    width: 100vw;
+    min-height: 25vh;
 
     &.content {
       padding: 2em;
@@ -46,7 +46,17 @@
   }
 
   &.flipped {
-    flex-direction: row-reverse;
+    flex-direction: col-reverse;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .row {
+    flex-direction: row;
+
+    &.flipped {
+      flex-direction: row-reverse;
+    }
   }
 }
 </style>

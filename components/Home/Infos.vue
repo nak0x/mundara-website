@@ -1,7 +1,7 @@
 <template>
   <section class="section b-bleu is-flex-center" id="infos">
-    <div class="is-flex-center flex-col">
-      <p class="title is-3 is-flex-center g-1" v-for="(info, idx) in infos" :key="idx">
+    <div class="info-container">
+      <p class="info title" v-for="(info, idx) in infos" :key="idx">
         <NuxtImg
           :src="info.img1"
           height="64"
@@ -11,8 +11,6 @@
         <span>{{ info.content }}</span>
         <NuxtImg
           :src="info.img2"
-          height="64"
-          width="130"
           format="avif"
         />
       </p>
@@ -21,9 +19,34 @@
 </template>
 
 <style lang="scss" scoped>
+
 .section {
   min-height: 75vh;
 }
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+
+    img {
+      width: 100%;
+      max-width: 15vw;
+    }
+  }
+}
+
 </style>
 
 <script setup>
