@@ -10,7 +10,7 @@
             <NuxtImg
               v-for="i in exp.layers"
               :key="i"
-              :src="`/images/experience/${exp.id}/layer_${i}.png`"
+              :src="`/images/experience/${exp.id}/layer_${i}.avif`"
               format="avif"
               class="layer"
               aria-hidden
@@ -25,7 +25,7 @@
           </div>
         </section>
         <NuxtImg
-          src="/images/door.png"
+          src="/images/door.avif"
           format="avif"
           placeholder
           class="clipping-door"

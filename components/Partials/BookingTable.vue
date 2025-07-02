@@ -109,7 +109,7 @@
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .bookingTable {
   border-radius: var(--bulma-radius);
 }

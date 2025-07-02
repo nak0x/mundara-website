@@ -70,23 +70,23 @@ const currentIndex = ref(0)
 const slides = [
   {
     title: 'MAROC',
-    image: '/images/maroco.jpg',
+    image: '/images/maroco.avif',
   },
   {
     title: 'MEXIQUE ANCIEN',
-    image: '/images/hands-clayering.png',
+    image: '/images/hands-clayering.avif',
   },
   {
     title: 'ÉGYPTE ANCIENNE',
-    image: '/images/egypte.jpg',
+    image: '/images/egypte.avif',
   },
   {
     title: 'GRÈCE ANTIQUE',
-    image: '/images/grece.jpg',
+    image: '/images/grece.avif',
   },
   {
     title: 'CHINE ANCIENNE',
-    image: '/images/china.jpg',
+    image: '/images/china.avif',
   }
 ]
 
@@ -133,7 +133,7 @@ const goToSlide = (index) => {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .carousel-container {
   position: relative;
   overflow: hidden;

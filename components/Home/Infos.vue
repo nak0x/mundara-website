@@ -7,11 +7,15 @@
           height="64"
           width="130"
           format="avif"
+          :alt="info.content"
         />
         <span>{{ info.content }}</span>
         <NuxtImg
           :src="info.img2"
           format="avif"
+          height="64"
+          width="130"
+          :alt="info.content"
         />
       </p>
     </div>
@@ -53,23 +57,23 @@
   const infos = [
     {
       "content": "Toute la semaine",
-      "img1": "images/infos-imgs/info-i1.png",
-      "img2": "images/infos-imgs/info-i2.png",
+      "img1": "images/infos-imgs/info-i1.avif",
+      "img2": "images/infos-imgs/info-i2.avif",
     },
     {
       "content": "Du lundi au vendredi",
-      "img1": "images/infos-imgs/info-i3.png",
-      "img2": "images/infos-imgs/info-i4.png",
+      "img1": "images/infos-imgs/info-i3.avif",
+      "img2": "images/infos-imgs/info-i4.avif",
     },
     {
       "content": "9H00 - 19H00",
-      "img1": "images/infos-imgs/info-i5.png",
-      "img2": "images/infos-imgs/info-i6.png",
+      "img1": "images/infos-imgs/info-i5.avif",
+      "img2": "images/infos-imgs/info-i6.avif",
     },
     {
       "content": "11 Place Carnot, Annecy",
-      "img1": "images/infos-imgs/info-i7.png",
-      "img2": "images/infos-imgs/info-i1.png",
+      "img1": "images/infos-imgs/info-i7.avif",
+      "img2": "images/infos-imgs/info-i1.avif",
     },
   ]
 </script>

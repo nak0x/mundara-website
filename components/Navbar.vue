@@ -43,7 +43,7 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .navbar-menu {
   .navbar-items-container {
     display: flex;

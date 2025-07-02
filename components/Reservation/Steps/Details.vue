@@ -84,7 +84,7 @@
   })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .details-image {
   min-height: 10dvh;
   aspect-ratio: 1;
