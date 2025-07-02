@@ -13,7 +13,7 @@
         <p class="is-size-5">0450982543</p>
       </div>
     </div>
-    <p class="uge title c-orange">MUNDARA</p>
+    <p class="uge is-size-1-mobile title c-orange">MUNDARA</p>
   </footer>
 </template>
 
