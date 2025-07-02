@@ -61,7 +61,7 @@
   })
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @media screen and (max-width: 768px) {
   .hero {
     padding: 3rem 0 0 0 !important;

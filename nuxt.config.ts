@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import Inspect from 'vite-plugin-inspect'
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   app: {
@@ -9,7 +10,11 @@ export default defineNuxtConfig({
       },
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'stylesheet', href: '/style/main.css' },
+        {
+          rel: 'stylesheet',
+          href: '/style/main.css',
+          crossorigin: 'anonymous',
+        },
         {
           rel: 'preload',
           href: '/fonts/Nersans-Three.woff2',
@@ -29,23 +34,37 @@ export default defineNuxtConfig({
   },
   devtools: {
     enabled: true,
-
-    timeline: {
-      enabled: true
-    }
   },
   ssr: true,
   target: 'static',
   nitro: {
-    preset: 'vercel-static'
+    preset: 'static',
+    compressPublicAssets: true,
   },
   css:['@/assets/scss/main.scss'],
+  build: {
+    extractCSS: true,
+  },
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
           additionalData: '@use "@/assets/scss/_vars.scss" as *;'
         }
+      }
+    },
+    build: {
+      minify: 'terser',
+      terserOptions: {
+        compress: { drop_console: true },
+      },
+    },
+    plugins: [
+      Inspect()
+    ],
+    server: {
+      fs: {
+        allow: ['.'] // important to allow plugin paths
       }
     }
   },
@@ -67,7 +86,14 @@ export default defineNuxtConfig({
       xl: 1280
     },
     // auto detects public/ path
-    dir: 'public'
+    dir: 'public',
+    presets: {
+      default: {
+        modifiers: {
+          loading: 'lazy'
+        }
+      }
+    }
   },
   imports: { autoImport: true },
 })

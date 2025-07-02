@@ -21,7 +21,7 @@
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .row {
   display: flex;
   flex-direction: column;

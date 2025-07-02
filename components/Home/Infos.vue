@@ -7,11 +7,15 @@
           height="64"
           width="130"
           format="avif"
+          :alt="info.content"
         />
         <span>{{ info.content }}</span>
         <NuxtImg
           :src="info.img2"
           format="avif"
+          height="64"
+          width="130"
+          :alt="info.content"
         />
       </p>
     </div>

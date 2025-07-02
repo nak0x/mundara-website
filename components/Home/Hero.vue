@@ -21,7 +21,7 @@
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .doors-images {
     width: 100vw;
     overflow: hidden;

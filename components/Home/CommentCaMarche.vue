@@ -12,7 +12,7 @@
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .row {
   height: 33vh;
 }

@@ -133,7 +133,7 @@ const goToSlide = (index) => {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .carousel-container {
   position: relative;
   overflow: hidden;

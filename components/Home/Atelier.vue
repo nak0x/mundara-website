@@ -7,7 +7,3 @@
     <HomeRuggedCarrousel />
   </section>
 </template>
-
-<style>
-
-</style>
