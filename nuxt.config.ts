@@ -36,7 +36,7 @@ export default defineNuxtConfig({
     enabled: true,
   },
   ssr: true,
-  target: 'static',
+  target: 'vercel-static',
   nitro: {
     preset: 'static',
   },
