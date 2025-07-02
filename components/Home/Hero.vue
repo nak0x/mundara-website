@@ -43,28 +43,28 @@
   const doors = [
     {
       title: 'Traditional Clayering',
-      img: '/images/doors/traditional-clay-pot.png',
+      img: '/images/doors/traditional-clay-pot.avif',
       rotation: -15,
       translateX: -20,
       translateY: 15,
     },
     {
       title: 'Holographic clayering',
-      img: '/images/doors/holographic-clayering.png',
+      img: '/images/doors/holographic-clayering.avif',
       rotation: -15,
       translateX: -17,
       translateY: 15,
     },
     {
       title: 'Hands clayering',
-      img: '/images/doors/hands-clayering.png',
+      img: '/images/doors/hands-clayering.avif',
       rotation: 10,
       translateX: 15,
       translateY: 16,
     },
     {
       title: 'Workbench clayering',
-      img: '/images/doors/workbench-clayering.png',
+      img: '/images/doors/workbench-clayering.avif',
       rotation: -15,
       translateX: 10,
       translateY: 20,

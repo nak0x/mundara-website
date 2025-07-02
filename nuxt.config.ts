@@ -59,7 +59,7 @@ export default defineNuxtConfig({
       }
     },
     // Default options
-    formats: ['avif', 'webp'], // tries AVIF first, falls back to WebP/PNG
+    formats: ['avif', 'webp'], // tries AVIF first, falls back to WebP/
     screens: {
       sm: 320,
       md: 640,
