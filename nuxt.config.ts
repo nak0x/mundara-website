@@ -39,7 +39,6 @@ export default defineNuxtConfig({
   target: 'static',
   nitro: {
     preset: 'static',
-    compressPublicAssets: true,
   },
   css:['@/assets/scss/main.scss'],
   build: {
