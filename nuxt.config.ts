@@ -9,10 +9,21 @@ export default defineNuxtConfig({
       },
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'stylesheet', href: '/style/main.css' }
-      ],
-      script: [
-        { src: 'https://kit.fontawesome.com/dce9068a82.js' }
+        { rel: 'stylesheet', href: '/style/main.css' },
+        {
+          rel: 'preload',
+          href: '/fonts/Nersans-Three.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous'
+        },
+        {
+          rel: 'preload',
+          href: '/fonts/GeneralSans-Variable.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous'
+        },
       ]
     }
   },

@@ -9,11 +9,65 @@
     </div>
     <div class="doors-images">
       <NuxtImg
-        src="/images/Hero-bottom.png"
-        alt="Doors with experiences previews"
+        v-for="(door, key) in doors"
+        :key="key"
+        :src="door.img"
+        :alt="door.title"
         format="avif"
-        class="custom-hero-bottom"
+        class="door"
+        :style="`transform: rotateZ(${door.rotation}deg) translateX(${door.translateX}%) translateY(${door.translateY}%)`"
       />
     </div>
   </section>
 </template>
+
+<style lang="scss">
+  .doors-images {
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .door {
+    border-radius: 99rem 99rem 0 0;
+    width: 23%;
+    height: auto;
+    aspect-ratio: 113/164;
+    background-color: var(--bulma-primary);
+  }
+</style>
+
+<script lang="js" setup>
+  const doors = [
+    {
+      title: 'Traditional Clayering',
+      img: '/images/doors/traditional-clay-pot.png',
+      rotation: -15,
+      translateX: -20,
+      translateY: 15,
+    },
+    {
+      title: 'Holographic clayering',
+      img: '/images/doors/holographic-clayering.png',
+      rotation: -15,
+      translateX: -17,
+      translateY: 15,
+    },
+    {
+      title: 'Hands clayering',
+      img: '/images/doors/hands-clayering.png',
+      rotation: 10,
+      translateX: 15,
+      translateY: 16,
+    },
+    {
+      title: 'Workbench clayering',
+      img: '/images/doors/workbench-clayering.png',
+      rotation: -15,
+      translateX: 10,
+      translateY: 20,
+    }
+  ]
+</script>

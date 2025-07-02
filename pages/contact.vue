@@ -10,7 +10,7 @@
             <div class="control has-icons-left has-icons-right">
               <input v-model="nom" class="input" type="text" placeholder="Nom" />
               <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
+                <FontAwesomeIcon icon="user" />
               </span>
             </div>
           </div>
@@ -27,7 +27,7 @@
             <div class="control has-icons-left has-icons-right">
               <input v-model="email" class="input" type="email" placeholder="monemail@service.com" />
               <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
+                <FontAwesomeIcon icon="envelope" />
               </span>
             </div>
           </div>

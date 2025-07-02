@@ -8,7 +8,7 @@
           <div class="control has-icons-left">
             <input v-model="cardName" class="input" type="text" placeholder="Jean Dupont" />
             <span class="icon is-small is-left">
-              <i class="fas fa-user"></i>
+              <FontAwesomeIcon icon="user" />
             </span>
           </div>
         </div>
@@ -18,7 +18,7 @@
           <div class="control has-icons-left">
             <input v-model="cardNumber" class="input" type="text" placeholder="1234 5678 9012 3456" />
             <span class="icon is-small is-left">
-              <i class="fas fa-credit-card"></i>
+              <FontAwesomeIcon icon="credit-card" />
             </span>
           </div>
         </div>
