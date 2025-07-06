@@ -2,7 +2,7 @@
 
 > ✨ Checkout the preprod [here 🔗](https://mundara-website.vercel.app/)
 
-![mundara-logo](https://github.com/nak0x/mundara-website/blob/readme/.githubassets/logo.avif?raw=true "Mundara logo")
+![mundara-logo](https://github.com/nak0x/Mundara/blob/main/Design/Githubassets/banner.png?raw=true "Mundara logo")
 
 ## Setup
 
