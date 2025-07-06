@@ -1,8 +1,8 @@
+<img src="https://github.com/nak0x/Mundara/blob/main/Design/Githubassets/banner.png?raw=true" alt="Mundara logo" width="100%"/>
+
 # Mundara Website
 
 > ✨ Checkout the preprod [here 🔗](https://mundara-website.vercel.app/)
-
-![mundara-logo](https://github.com/nak0x/mundara-website/blob/readme/.githubassets/logo.avif?raw=true "Mundara logo")
 
 ## Setup
 
